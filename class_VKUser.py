@@ -35,17 +35,29 @@ class VKUser:
             'v': '5.131',
         }
         res = requests.get(url_check, params=params)
-        res = res.json()['response'][0]['is_closed']
+        res = res.json()['response'][0].get('is_closed')
         return res
 
     def Check_Del_Profile(self):
+        url_check = self.url + 'users.get'
         params = {
             'user_ids': self.id_VK,
             'access_token': self.token,
             'v': '5.131',
         }
         res = requests.get(url_check, params=params)
-        res = res.json()['response'][0]['deactivated']
+        res = res.json()['response'][0].get('deactivated')
+        return res
+
+    def Response(self):
+        url_check = self.url + 'users.get'
+        params = {
+            'user_ids': self.id_VK,
+            'access_token': self.token,
+            'v': '5.131',
+        }
+        res = requests.get(url_check, params=params)
+        res = res.json()['response']
         return res
 
 
