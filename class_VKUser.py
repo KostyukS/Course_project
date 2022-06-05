@@ -39,7 +39,7 @@ class VKUser:
         return res
 
     def Check_Del_Profile(self):
-        rams = {
+        params = {
             'user_ids': self.id_VK,
             'access_token': self.token,
             'v': '5.131',
