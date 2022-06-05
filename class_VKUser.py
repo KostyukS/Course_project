@@ -1,3 +1,7 @@
+import requests
+from datetime import datetime
+import os
+
 class VKUser:
     url = 'https://api.vk.com/method/'
 
@@ -34,6 +38,15 @@ class VKUser:
         res = res.json()['response'][0]['is_closed']
         return res
 
+    def Check_Del_Profile(self):
+        rams = {
+            'user_ids': self.id_VK,
+            'access_token': self.token,
+            'v': '5.131',
+        }
+        res = requests.get(url_check, params=params)
+        res = res.json()['response'][0]['deactivated']
+        return res
 
 
     def file_name(self, res):

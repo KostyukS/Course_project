@@ -1,3 +1,6 @@
+import requests
+
+
 class YaUploader:
     def __init__(self, tok: str):
         self.token = tok
