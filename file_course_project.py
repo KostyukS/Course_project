@@ -12,7 +12,7 @@ if __name__ == '__main__':
     token_YAdisk = 'AQAAAAATeViuAADLWyqJ3Qq4ykievdqZkK0qGd4'
     token_VK = '38e6e9688c1e1e758bce2428e15f910a662863791d8d803a406694c5f7456f4a40c18ee3c546760c480bb'
     version = '5.131'
-    id_VK = '88888'
+    id_VK = '869321354354'
 
     target = class_VKUser.VKUser(token_VK, version, id_VK)
     if len(target.Check_resp()) == 0:
