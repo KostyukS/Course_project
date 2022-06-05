@@ -49,7 +49,7 @@ class VKUser:
         res = res.json()['response'][0].get('deactivated')
         return res
 
-    def Response_check(self):
+    def Check_resp(self):
         url_check = self.url + 'users.get'
         params = {
             'user_ids': self.id_VK,
